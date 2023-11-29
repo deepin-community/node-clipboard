@@ -1,0 +1,6 @@
+# Same author
+add-component-copyright delegate *
+add-component-copyright good-listener *
+add-component-copyright select *
+# Doc
+very-long-line-length-in-source-file *.md*

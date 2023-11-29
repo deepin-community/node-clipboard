@@ -1,0 +1,25 @@
+uglifyjs-webpack-plugin is dead upstream
+
+--- a/webpack.config.js
++++ b/webpack.config.js
+@@ -1,7 +1,7 @@
+ const pkg = require('./package.json');
+ const path = require('path');
+ const webpack = require('webpack');
+-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
++const TerserPlugin = require('terser-webpack-plugin');
+ 
+ const production = process.env.NODE_ENV === 'production' || false;
+ 
+@@ -34,9 +34,9 @@
+    optimization: {
+     minimize: production,
+     minimizer: [
+-      new UglifyJSPlugin({
++      new TerserPlugin({
+         parallel: require('os').cpus().length,
+-        uglifyOptions: {
++        terserOptions: {
+           ie8: false,
+           keep_fnames: false,
+           output: {

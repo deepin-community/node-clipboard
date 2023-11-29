@@ -1,0 +1,39 @@
+version=4
+opts=\
+dversionmangle=auto,\
+repacksuffix=+ds,\
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-clipboard-$1/ \
+ https://github.com/zenorocha/clipboard.js/tags .*/archive/.*/v?([\d\.]+).tar.gz group
+
+opts=\
+ctype=nodejs,\
+component=delegate,\
+dversionmangle=auto,\
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-delegate-$1/ \
+ https://github.com/zenorocha/delegate/tags .*/archive/.*/v?([\d\.]+).tar.gz checksum
+
+opts=\
+ctype=nodejs,\
+component=good-listener,\
+dversionmangle=auto,\
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-good-listener-$1/ \
+ https://github.com/zenorocha/good-listener/tags .*/archive/.*/v?([\d\.]+).tar.gz checksum
+
+opts=\
+ctype=nodejs,\
+component=select,\
+dversionmangle=auto,\
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-select-$1/ \
+ https://github.com/zenorocha/select/tags .*/archive/.*/v?([\d\.]+).tar.gz checksum
+
+opts=\
+ctype=nodejs,\
+component=tiny-emitter,\
+dversionmangle=auto,\
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-tiny-emitter-$1/ \
+ https://github.com/scottcorgan/tiny-emitter/tags .*/archive/.*/v?([\d\.]+).tar.gz checksum
+
+# It is not recommended use npmregistry. Please investigate more.
+# Take a look at https://wiki.debian.org/debian/watch/
+opts="searchmode=plain,component=types-clipboard,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-clipboard-$1/" \
+ https://registry.npmjs.org/@types/clipboard https://registry.npmjs.org/@types/clipboard/-/clipboard-([\d\.]+)@ARCHIVE_EXT@ checksum

@@ -1,0 +1,9 @@
+Description: don't install demo in /usr/share/nodejs
+Author: Yadd <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2022-07-17
+
+--- /dev/null
++++ b/.npmignore
+@@ -0,0 +1 @@
++demo
