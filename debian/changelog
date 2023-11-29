@@ -1,5 +1,102 @@
-template-repository (1.0-1) unstable; urgency=medium
+node-clipboard (2.0.11+ds+~cs9.6.11-1) unstable; urgency=medium
 
-  * Initial release
+  * Team upload
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+  [ Anastasios Lisgaras ]
+  * New upstream version 2.0.11+ds+~cs9.6.11
+
+  [ Yadd ]
+  * Fix lintian overrides
+  * Install example in the right place
+  * Clean copyright
+  * Rename virtual libjs-cliboard.js into libjs-clipboard
+
+ -- Anastasios Lisgaras <tas-sos@g-lts.info>  Sun, 17 Jul 2022 17:49:57 +0200
+
+node-clipboard (2.0.8+ds+~cs9.6.11-2) unstable; urgency=medium
+
+  * Fix build failure with webpack 5 (Closes: #1003333)
+  * Bump Standards-Version to 4.6.1 (no changes needed)
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 24 May 2022 00:01:08 +0530
+
+node-clipboard (2.0.8+ds+~cs9.6.11-1) unstable; urgency=medium
+
+  * Team upload
+  * Set upstream metadata fields: Bug-Submit.
+  * Bump debhelper compatibility level to 13
+  * debian/watch:
+    * Add ctype=nodejs to component(s)
+    * Fix GitHub tags regex
+    * Fix filenamemangle
+  * Use dh-sequence-nodejs
+  * Update standards version to 4.6.0, no changes needed.
+  * Embed typescript declarations
+  * New upstream version 2.0.8+ds+~cs9.6.11
+  * Add patch for webpack 4 (new version uses webpack 5)
+  * Drop debian/nodejs/files to have esm files
+
+ -- Yadd <yadd@debian.org>  Thu, 13 Jan 2022 17:36:59 +0100
+
+node-clipboard (2.0.6+ds+~cs7.6.4-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Doug Torrance ]
+  * Fix typo in links (Closes: #960859)
+
+  [ Xavier Guimard ]
+  * Use uscan checksum
+    Really 2.0.6+~3.2.0+~1.2.2+~1.1.2+~2.1.0
+
+ -- Xavier Guimard <yadd@debian.org>  Sun, 17 May 2020 20:44:33 +0200
+
+node-clipboard (2.0.6+ds-2) unstable; urgency=medium
+
+  [ Nilesh Patra ]
+  * Adapt package to build with babel7
+  * Update build-deps
+
+  [ Pirate Praveen ]
+  * Tighten dependency on node-babel-loader
+
+ -- Pirate Praveen <praveen@debian.org>  Sun, 10 May 2020 14:12:23 +0530
+
+node-clipboard (2.0.6+ds-1) unstable; urgency=medium
+
+  [ Abraham Raji ]
+  * Team Upload
+  * New upstream version 2.0.6+ds
+
+  [ Xavier Guimard ]
+  * Fix copyright
+  * Fix previous changelog
+
+ -- Abraham Raji <avronr@tuta.io>  Fri, 13 Mar 2020 16:29:21 +0000
+
+node-clipboard (2.0.4+ds-2) unstable; urgency=medium
+
+  [ Xavier Guimard ]
+  * Bump debhelper compatibility level to 12
+  * Add "Rules-Requires-Root: no"
+  * Add debian/gbp.conf
+  * Add upstream/metadata
+  * Replace embedded modules by uscan components
+  * Use pkg-js-tools auto install
+  * Exclude dist/* from import
+  * New upstream version 2.0.4+ds
+  * Install missing libjs-clibboard.js
+  * Update copyright
+  * Declare compliance with policy 4.5.0
+
+  [ Pirate Praveen ]
+  * Use upstream provided webpack config
+  * Source-only upload for testing migration
+
+ -- Pirate Praveen <praveen@debian.org>  Sun, 23 Feb 2020 16:48:04 +0530
+
+node-clipboard (2.0.4+ds-1) unstable; urgency=low
+
+  * Initial release (Closes: #887620)
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 03 Jan 2020 09:16:56 +0100

@@ -1,0 +1,18 @@
+Description: Use system libs
+--- a/webpack.config.js
++++ b/webpack.config.js
+@@ -25,7 +25,13 @@
+   module: {
+     rules: [{ test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' }],
+   },
+-  optimization: {
++    resolve: {
++      modules: ['/usr/lib/nodejs', '/usr/share/nodejs', 'node_modules'],
++    },
++    resolveLoader: {
++      modules: ['/usr/lib/nodejs', '/usr/share/nodejs'],
++    },
++   optimization: {
+     minimize: production,
+     minimizer: [
+       new UglifyJSPlugin({

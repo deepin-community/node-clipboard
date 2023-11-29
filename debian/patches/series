@@ -1,0 +1,3 @@
+use-system-libs.patch
+switch-to-terser-webpack-plugin.patch
+dont-install-demo.patch
